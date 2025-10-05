@@ -1,182 +1,228 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>BOBBIN SPORTS — Born in Sialkot. Built for Athletes.</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <meta name="description" content="BOBBIN SPORTS — Sportswear manufactured in Sialkot, exported worldwide. Tracksuits, jerseys, shorts, hoodies, compression and training gear.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BOBBIN SPORTS</title>
   <style>
-    :root{--navy:#0b3a66;--accent:#0b66a6;--white:#ffffff;--muted:#6b7280}
-    *{box-sizing:border-box}
-    body{font-family:'Poppins',system-ui,Segoe UI,Roboto,Arial,sans-serif;margin:0;color:#111;background:#f7fbff}
-    a{color:inherit;text-decoration:none}
-    header{background:linear-gradient(180deg,rgba(11,58,102,0.95),rgba(11,58,102,0.9));color:var(--white);padding:20px 16px;position:sticky;top:0;z-index:50}
-    .nav{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:12px}
-    .brand{display:flex;align-items:center;gap:12px}
-    .logo{font-weight:700;letter-spacing:1px;font-size:20px}
-    nav ul{list-style:none;display:flex;gap:16px;margin:0;padding:0}
-    nav a{color:var(--white);font-weight:600;opacity:.95}
-    .hero{max-width:1100px;margin:34px auto 16px;padding:18px;display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center}
-    .hero-left h1{font-size:34px;margin:0 0 10px}
-    .tag{font-weight:600;color:var(--white);opacity:.95}
-    .lead{color:#f1f7fb;margin:0 0 18px;opacity:.95}
-    .btn-primary{background:var(--accent);color:var(--white);padding:12px 16px;border-radius:10px;font-weight:700;display:inline-block}
-    .hero-right{border-radius:12px;overflow:hidden;box-shadow:0 10px 30px rgba(11,58,102,0.12)}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
 
-    main{max-width:1100px;margin:18px auto;padding:0 18px}
-    .section{padding:28px 0}
-    .section h2{margin:0 0 12px;font-size:22px;color:var(--navy)}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
-    .card{background:var(--white);border-radius:10px;overflow:hidden;box-shadow:0 8px 24px rgba(9,30,66,0.06)}
-    .card img{width:100%;height:170px;object-fit:cover;display:block}
-    .card .meta{padding:12px}
-    .card .meta h3{margin:0;font-size:16px;color:var(--navy)}
-    .card .meta p{margin:6px 0 0;color:var(--muted);font-size:13px}
+    body {
+      background-color: #ffffff;
+      color: #001f3f;
+      scroll-behavior: smooth;
+    }
 
-    .about{display:flex;gap:18px;align-items:flex-start;flex-wrap:wrap}
-    .about .text{flex:1}
-    .about .image{width:320px;border-radius:10px;overflow:hidden}
-    .cta{display:flex;gap:12px;align-items:center}
+    header {
+      background-color: #001f3f;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      font-size: 1.5em;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
 
-    .contact-card{background:linear-gradient(180deg,var(--white),#f4f8fb);padding:18px;border-radius:10px;display:flex;gap:12px;align-items:center;justify-content:space-between}
-    .socials a{display:inline-block;margin-right:8px;padding:8px 10px;background:#eef6ff;border-radius:8px;font-weight:600}
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      background-color: #003366;
+      padding: 15px 0;
+    }
 
-    footer{text-align:center;color:var(--muted);padding:28px 8px;font-size:14px}
-    @media (max-width:880px){.hero{grid-template-columns:1fr;padding:12px}.hero-right{height:260px}.about{flex-direction:column}.about .image{width:100%}}
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #00bfff;
+    }
+
+    section {
+      padding: 80px 20px;
+      text-align: center;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    section h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      color: #001f3f;
+    }
+
+    section p {
+      font-size: 1.1em;
+      color: #333;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+
+    .hero {
+      background: url('https://images.unsplash.com/photo-1599058917212-d750089bc07b?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+      color: white;
+      padding: 150px 20px;
+      text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
+    }
+
+    .hero h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.3em;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .product {
+      background-color: #f5f8fa;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .product:hover {
+      transform: translateY(-5px);
+    }
+
+    .product img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .product h3 {
+      padding: 15px;
+      background-color: #001f3f;
+      color: white;
+      font-size: 1.2em;
+    }
+
+    .contact-info {
+      margin-top: 30px;
+      font-size: 1.1em;
+      color: #333;
+    }
+
+    footer {
+      background-color: #001f3f;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .social-links a {
+      margin: 0 10px;
+      color: #00bfff;
+      text-decoration: none;
+    }
+
+    /* Floating WhatsApp Button */
+    .whatsapp-float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: white;
+      border-radius: 50%;
+      text-align: center;
+      font-size: 30px;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+      z-index: 100;
+    }
+
+    .whatsapp-float i {
+      margin-top: 15px;
+    }
   </style>
+
+  <!-- FontAwesome for WhatsApp Icon -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <header>
-    <div class="nav">
-      <div class="brand">
-        <div class="logo">BOBBIN SPORTS</div>
-        <div style="font-size:13px;opacity:.9">Born in Sialkot • Built for Athletes</div>
-      </div>
-      <nav>
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#products">Products</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+
+  <header>BOBBIN SPORTS</header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#products">Products</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
   <section id="home" class="hero">
-    <div class="hero-left">
-      <div style="display:inline-block;padding:6px 10px;border-radius:8px;background:rgba(255,255,255,0.06);color:#eaf6ff;font-weight:700;font-size:12px">Made in Sialkot</div>
-      <h1 style="margin-top:14px">Born in Sialkot. Built for Athletes. Trusted Worldwide.</h1>
-      <p class="lead">BOBBIN SPORTS crafts high-performance sportswear — from team jerseys and tracksuits to training gear and compression wear. Export quality, export-ready.</p>
-      <div class="cta"><a class="btn-primary" href="#products">Explore Collection</a></div>
-    </div>
-    <div class="hero-right">
-      <img src="https://source.unsplash.com/800x600/?athlete,sportswear,team" alt="hero image" style="width:100%;height:100%;object-fit:cover;display:block">
+    <h1>Elevate Your Game</h1>
+    <p>Premium quality sportswear crafted in Sialkot — designed for athletes, trusted worldwide.</p>
+  </section>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>At BOBBIN SPORTS, we blend innovation, performance, and comfort to create sportswear that empowers every athlete. Proudly made in Sialkot, we deliver globally with a promise of quality and passion for the game.</p>
+    <img src="https://images.unsplash.com/photo-1585085636469-79b2b1b3b26a?auto=format&fit=crop&w=1200&q=80" alt="About Us" style="width:100%; border-radius:10px; margin-top:20px;">
+  </section>
+
+  <section id="products">
+    <h2>Our Products</h2>
+    <div class="products">
+      <div class="product">
+        <img src="https://images.unsplash.com/photo-1618354691397-891adf6c4b3d?auto=format&fit=crop&w=800&q=80" alt="Tracksuit">
+        <h3>Tracksuits</h3>
+      </div>
+      <div class="product">
+        <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=800&q=80" alt="Gym Wear">
+        <h3>Gym Wear</h3>
+      </div>
+      <div class="product">
+        <img src="https://images.unsplash.com/photo-1606813902871-9b6e6f37c88f?auto=format&fit=crop&w=800&q=80" alt="Hoodies">
+        <h3>Hoodies</h3>
+      </div>
+      <div class="product">
+        <img src="https://images.unsplash.com/photo-1599058917212-d750089bc07b?auto=format&fit=crop&w=800&q=80" alt="Jerseys">
+        <h3>Jerseys</h3>
+      </div>
     </div>
   </section>
 
-  <main>
-    <section id="products" class="section">
-      <h2>Our Products</h2>
-      <div class="grid">
-
-        <div class="card">
-          <img src="https://source.unsplash.com/640x480/?tracksuit" alt="Tracksuit">
-          <div class="meta"><h3>Tracksuits</h3><p>Lightweight, double-stitched, export-grade fabrics for team warmups.</p></div>
-        </div>
-
-        <div class="card">
-          <img src="https://source.unsplash.com/640x480/?football-jersey,soccer-jersey" alt="Jerseys">
-          <div class="meta"><h3>Jerseys</h3><p>Custom prints, breathable mesh, and pro seams for match-day performance.</p></div>
-        </div>
-
-        <div class="card">
-          <img src="https://source.unsplash.com/640x480/?shorts,sports-shorts" alt="Shorts">
-          <div class="meta"><h3>Shorts</h3><p>Elastic waist, moisture-wicking fabrics, and clean finish for athletes.</p></div>
-        </div>
-
-        <div class="card">
-          <img src="https://source.unsplash.com/640x480/?hoodie,sports-hoodie" alt="Hoodies">
-          <div class="meta"><h3>Hoodies</h3><p>Comfort-fit pullovers and zip-ups — great for training and casual wear.</p></div>
-        </div>
-
-        <div class="card">
-          <img src="https://source.unsplash.com/640x480/?compression,compression-gear" alt="Compression wear">
-          <div class="meta"><h3>Compression Wear</h3><p>Supportive fabrics that aid performance and recovery.</p></div>
-        </div>
-
-        <div class="card">
-          <img src="https://source.unsplash.com/640x480/?training-gear,gym-gear" alt="Training gear">
-          <div class="meta"><h3>Training Gear</h3><p>Durable training sets, practice kits, and accessories for teams.</p></div>
-        </div>
-
-      </div>
-    </section>
-
-    <section id="about" class="section">
-      <h2>About Us</h2>
-      <div class="about">
-        <div class="text">
-          <p style="margin-top:0;color:#334155">BOBBIN SPORTS is a sportswear manufacturer based in Sialkot, Pakistan — a city with a proud legacy in sports goods manufacturing. We combine local craftsmanship with strict quality checks to deliver export-grade apparel. Our focus is on fit, durability, and performance so teams and athletes get gear they can trust.</p>
-          <p style="color:#334155">We work with clubs, schools, and retailers to provide custom sizes, branding, and bulk production. From sample approval to full production runs, our process is designed to be simple, reliable, and export-compliant.</p>
-        </div>
-        <div class="image"><img src="https://source.unsplash.com/640x640/?factory,sportswear" alt="factory" style="width:100%;height:100%;object-fit:cover;display:block"></div>
-      </div>
-    </section>
-
-    <section id="contact" class="section">
-      <h2>Contact Us</h2>
-      <div class="grid" style="grid-template-columns:1fr 320px">
-        <div>
-          <div class="contact-card">
-            <div>
-              <strong>Ready to order?</strong>
-              <div style="color:var(--muted);margin-top:6px">Send us a message on WhatsApp or follow our socials to see latest samples.</div>
-            </div>
-            <div style="text-align:right">
-              <a class="btn-primary" href="https://wa.me/" target="_blank" rel="noopener">WhatsApp</a>
-            </div>
-          </div>
-
-          <div style="margin-top:14px">
-            <form onsubmit="event.preventDefault();alert('Thanks! We will contact you soon.');" style="display:flex;flex-direction:column;gap:8px">
-              <input type="text" placeholder="Your name" required style="padding:10px;border-radius:8px;border:1px solid #e6eef8">
-              <input type="email" placeholder="Email" required style="padding:10px;border-radius:8px;border:1px solid #e6eef8">
-              <textarea placeholder="Message / Order details" rows="4" style="padding:10px;border-radius:8px;border:1px solid #e6eef8"></textarea>
-              <button class="btn-primary" type="submit">Send Message</button>
-            </form>
-          </div>
-        </div>
-
-        <div>
-          <div style="background:var(--white);padding:12px;border-radius:10px;box-shadow:0 8px 24px rgba(9,30,66,0.06)">
-            <h3 style="margin:0 0 6px">Follow Us</h3>
-            <div style="color:var(--muted);margin-bottom:10px">See new samples, behind-the-scenes and offers.</div>
-            <div class="socials">
-              <a href="https://www.instagram.com/bobbin_sports/" target="_blank" rel="noopener">Instagram</a>
-              <a href="https://www.facebook.com/share/19k5HWEuxo/" target="_blank" rel="noopener">Facebook</a>
-            </div>
-            <div style="margin-top:12px;color:var(--muted);font-size:13px">Email: <a href="mailto:info@bobbinsports.com">info@bobbinsports.com</a></div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>We’re always ready to collaborate or supply your team with premium quality sportswear.</p>
+    <div class="contact-info">
+      📧 Email: <a href="mailto:abdulwahabtahir59@gmail.com">abdulwahabtahir59@gmail.com</a><br>
+      📍 Sialkot, Pakistan
+    </div>
+    <div class="social-links" style="margin-top:20px;">
+      <a href="https://www.instagram.com/bobbin_sports/" target="_blank">Instagram</a> |
+      <a href="https://www.facebook.com/share/19k5HWEuxo/" target="_blank">Facebook</a>
+    </div>
+  </section>
 
   <footer>
-    © <span id="year"></span> BOBBIN SPORTS • Sialkot, Pakistan
+    © 2025 BOBBIN SPORTS — All Rights Reserved.
   </footer>
 
-  <script>
-    document.getElementById('year').textContent=new Date().getFullYear();
-    // smooth scroll for nav
-    document.querySelectorAll('a[href^="#"]').forEach(a=>{
-      a.addEventListener('click',e=>{
-        e.preventDefault();const target=document.querySelector(a.getAttribute('href'));
-        if(target) target.scrollIntoView({behavior:'smooth',block:'start'});
-      });
-    });
-  </script>
+  <a href="https://wa.me/923285644237" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
 </body>
 </html>
