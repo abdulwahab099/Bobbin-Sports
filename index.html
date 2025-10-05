@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BOBBIN SPORTS</title>
+  <title>BOBBIN SPORTS - Premium Sportswear</title>
   <style>
     * {
       margin: 0;
@@ -37,6 +37,9 @@
       background-color: #003366;
       padding: 15px 0;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
     nav a {
@@ -79,6 +82,24 @@
       text-shadow: 1px 1px 8px rgba(0,0,0,0.7);
       border-radius: 10px;
       margin-bottom: 50px;
+      background: url('https://images.pexels.com/photos/159515/football-american-football-runner-player-159515.jpeg?auto=compress&cs=tinysrgb&w=1600') no-repeat center center/cover;
+      position: relative;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 31, 63, 0.6);
+      border-radius: 10px;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
     }
 
     .hero h1 {
@@ -89,7 +110,26 @@
     .hero p {
       font-size: 1.3em;
       max-width: 650px;
-      margin: 0 auto;
+      margin: 0 auto 25px auto;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background-color: #00bfff;
+      color: white;
+      padding: 12px 30px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1em;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0, 191, 255, 0.3);
+    }
+
+    .cta-button:hover {
+      background-color: #0099cc;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(0, 191, 255, 0.4);
     }
 
     .products {
@@ -134,6 +174,54 @@
       margin-top: 30px;
       font-size: 1.1em;
       color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .contact-info a.email-link {
+      text-decoration: none;
+      color: #001f3f;
+      font-weight: 500;
+      font-size: 1.1em;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    .contact-info a.email-link:hover {
+      color: #00bfff;
+      transform: scale(1.05);
+    }
+
+    .contact-icons {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      margin-top: 15px;
+    }
+
+    .contact-icons a {
+      font-size: 2em;
+      transition: transform 0.3s ease;
+    }
+
+    /* Brand colors */
+    .contact-icons a.instagram { color: #E1306C; }
+    .contact-icons a.facebook { color: #3b5998; }
+    .contact-icons a.whatsapp { color: #25D366; }
+
+    /* Bounce effect on hover */
+    .contact-icons a:hover {
+      animation: bounce 0.5s;
+    }
+
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+      40% { transform: translateY(-10px); }
+      60% { transform: translateY(-5px); }
     }
 
     footer {
@@ -142,17 +230,6 @@
       text-align: center;
       padding: 25px;
       font-size: 0.95em;
-    }
-
-    .social-links a {
-      margin: 0 12px;
-      color: #00bfff;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-
-    .social-links a:hover {
-      color: #0077cc;
     }
 
     .whatsapp-float {
@@ -168,16 +245,88 @@
       font-size: 32px;
       box-shadow: 2px 4px 12px rgba(0,0,0,0.3);
       z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       transition: transform 0.3s ease;
     }
 
     .whatsapp-float:hover {
-      transform: scale(1.1);
+      transform: scale(1.15);
     }
+
+    /* Contact Form Styles */
+    .contact-form {
+      max-width: 600px;
+      margin: 30px auto 0;
+      text-align: left;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 500;
+      color: #001f3f;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 1em;
+      transition: border 0.3s ease;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      border-color: #00bfff;
+      outline: none;
+    }
+
+    .form-group textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    .submit-btn {
+      background-color: #001f3f;
+      color: white;
+      border: none;
+      padding: 12px 30px;
+      border-radius: 5px;
+      font-size: 1em;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .submit-btn:hover {
+      background-color: #003366;
+    }
+
+    /* Product details */
+    .product-details {
+      padding: 15px;
+      text-align: left;
+    }
+
+    .product-details p {
+      margin-bottom: 10px;
+      font-size: 0.95em;
+      color: #555;
+    }
+
+    /* Removed price class as it's no longer needed */
   </style>
 
-  <!-- FontAwesome for WhatsApp Icon -->
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <!-- Updated FontAwesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
@@ -190,53 +339,94 @@
     <a href="#contact">Contact</a>
   </nav>
 
-  <section id="home" class="hero" style="background: url('https://images.pexels.com/photos/159515/football-american-football-runner-player-159515.jpeg?auto=compress&cs=tinysrgb&w=1600') no-repeat center center/cover;">
-    <h1>Elevate Your Game</h1>
-    <p>Premium quality sportswear crafted in Sialkot — designed for athletes, trusted worldwide.</p>
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Elevate Your Game</h1>
+      <p>Premium quality sportswear crafted in Sialkot — designed for athletes, trusted worldwide.</p>
+      <a href="#products" class="cta-button">Explore Products</a>
+    </div>
   </section>
 
   <section id="about">
     <h2>About Us</h2>
     <p>At BOBBIN SPORTS, we blend innovation, performance, and comfort to create sportswear that empowers every athlete. Proudly made in Sialkot, we deliver globally with a promise of quality and passion for the game.</p>
-    <img src="https://images.unsplash.com/photo-1585085636469-79b2b1b3b26a?auto=format&fit=crop&w=1200&q=80" alt="About Us" style="width:100%; border-radius:10px; margin-top:20px;">
+    <p>With years of expertise in manufacturing premium sportswear, we ensure every product meets international standards while maintaining competitive pricing.</p>
   </section>
 
   <section id="products">
     <h2>Our Products</h2>
     <div class="products">
       <div class="product">
-        <img src="https://postimg.cc/t7YdpBtF" alt="Tracksuit">
+        <img src="https://copilot.microsoft.com/th/id/BCO.144b4028-68c4-4927-8f07-5a4e507da2c6.png" alt="Tracksuit">
         <h3>Tracksuits</h3>
+        <div class="product-details">
+          <p>Comfortable and stylish tracksuits for all weather conditions.</p>
+        </div>
       </div>
       <div class="product">
         <img src="https://copilot.microsoft.com/th/id/BCO.515a4239-adc9-45c7-b8a3-afb73cd4415a.png" alt="Gym Wear">
         <h3>Gym Wear</h3>
+        <div class="product-details">
+          <p>Flexible and durable workout clothing for maximum performance.</p>
+        </div>
       </div>
       <div class="product">
-        <img src="https://lh3.googleusercontent.com/gg-dl/AJfQ9KQePGGMPk3-LfYURv-sR6B7uMb4fSjeRcQXDvMgKiC1FTvCnuJDEvkn16MFfSlAuiQ0HGRyZjwmkZ45qeNcmkV2_n5JXlwrQNx_z6diAHnheswhgwInVpO38nHhXWJ-_GYWl3B-iFOlalnOEWYK6rsdpiFRTB6-my29Q2DeJRlaCW-N=s1024" alt="Hoodie">
+        <img src="https://copilot.microsoft.com/th/id/BCO.f6f6a8af-5404-4f56-86c1-134a0719d4f3.png" alt="Hoodie">
         <h3>Hoodies</h3>
+        <div class="product-details">
+          <p>Warm and comfortable hoodies with modern designs.</p>
+        </div>
       </div>
       <div class="product">
-        <img src="https://lh3.googleusercontent.com/gg-dl/AJfQ9KSNS2cJ8irebIhsFU0HiQ_H1XLwxI2iyQuHc2vqm2htpMgy9h0hDl1jFvyZ1AUVaIhEUMEgC3by8PXzw7Jet3E_h2h0viWgJSasnz3RTcAojvMQcILPK8kZkw8qqSD7B0zkdmoRRrm3na_NDsj0N9bCY7XOo8kk2uHRNrMGEB6DLpau=s1024" alt="Jersey">
+        <img src="https://copilot.microsoft.com/th/id/BCO.ab5277bb-58df-47c8-a2a9-26734c69f252.png" alt="Jersey">
         <h3>Jerseys</h3>
+        <div class="product-details">
+          <p>Team and custom jerseys with breathable fabric technology.</p>
+        </div>
       </div>
       <div class="product">
         <img src="https://www.highqualityind.com/watermark.php?path=pictures/Compression%20wear_HQI-102_105_3.jpg" alt="Compression Wear">
         <h3>Compression Wear</h3>
+        <div class="product-details">
+          <p>Performance-enhancing compression gear for athletes.</p>
+        </div>
       </div>
     </div>
   </section>
 
   <section id="contact">
     <h2>Contact Us</h2>
-    <p>We’re always ready to collaborate or supply your team with premium quality sportswear.</p>
-    <div class="contact-info">
-      📧 Email: <a href="mailto:abdulwahabtahir59@gmail.com">abdulwahabtahir59@gmail.com</a><br>
-      📍 Sialkot, Pakistan
+    <p>We're always ready to collaborate or supply your team with premium quality sportswear.</p>
+    
+    <div class="contact-form">
+      <form id="inquiryForm">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Your Message</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Send Message</button>
+      </form>
     </div>
-    <div class="social-links" style="margin-top:20px;">
-      <a href="https://www.instagram.com/bobbin_sports/" target="_blank">Instagram</a> |
-      <a href="https://www.facebook.com/share/19k5HWEuxo/" target="_blank">Facebook</a>
+    
+    <div class="contact-info">
+      <a href="mailto:abdulwahabtahir59@gmail.com" class="email-link"><i class="fas fa-envelope"></i> abdulwahabtahir59@gmail.com</a>
+      <div class="contact-icons">
+        <a href="https://www.instagram.com/bobbin_sports/" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/share/14MibgMUVgk/" target="_blank" class="facebook"><i class="fab fa-facebook"></i></a>
+        <a href="https://wa.me/923285644237" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+      </div>
     </div>
   </section>
 
@@ -247,6 +437,18 @@
   <a href="https://wa.me/923285644237" class="whatsapp-float" target="_blank">
     <i class="fab fa-whatsapp"></i>
   </a>
+
+  <script>
+    // Simple form handling
+    document.getElementById('inquiryForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // In a real implementation, you would send this data to a server
+      // For now, we'll just show an alert and reset the form
+      alert('Thank you for your inquiry! We will get back to you soon.');
+      this.reset();
+    });
+  </script>
 
 </body>
 </html>
