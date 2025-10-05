@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BOBBIN SPORTS — Born in Sialkot. Built for Athletes.</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <meta name="description" content="BOBBIN SPORTS — Sportswear manufactured in Sialkot, exported worldwide. Tracksuits, jerseys, shorts, hoodies, compression and training gear.">
+  <style>
+    :root{--navy:#0b3a66;--accent:#0b66a6;--white:#ffffff;--muted:#6b7280}
+    *{box-sizing:border-box}
+    body{font-family:'Poppins',system-ui,Segoe UI,Roboto,Arial,sans-serif;margin:0;color:#111;background:#f7fbff}
+    a{color:inherit;text-decoration:none}
+    header{background:linear-gradient(180deg,rgba(11,58,102,0.95),rgba(11,58,102,0.9));color:var(--white);padding:20px 16px;position:sticky;top:0;z-index:50}
+    .nav{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{font-weight:700;letter-spacing:1px;font-size:20px}
+    nav ul{list-style:none;display:flex;gap:16px;margin:0;padding:0}
+    nav a{color:var(--white);font-weight:600;opacity:.95}
+    .hero{max-width:1100px;margin:34px auto 16px;padding:18px;display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center}
+    .hero-left h1{font-size:34px;margin:0 0 10px}
+    .tag{font-weight:600;color:var(--white);opacity:.95}
+    .lead{color:#f1f7fb;margin:0 0 18px;opacity:.95}
+    .btn-primary{background:var(--accent);color:var(--white);padding:12px 16px;border-radius:10px;font-weight:700;display:inline-block}
+    .hero-right{border-radius:12px;overflow:hidden;box-shadow:0 10px 30px rgba(11,58,102,0.12)}
+
+    main{max-width:1100px;margin:18px auto;padding:0 18px}
+    .section{padding:28px 0}
+    .section h2{margin:0 0 12px;font-size:22px;color:var(--navy)}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+    .card{background:var(--white);border-radius:10px;overflow:hidden;box-shadow:0 8px 24px rgba(9,30,66,0.06)}
+    .card img{width:100%;height:170px;object-fit:cover;display:block}
+    .card .meta{padding:12px}
+    .card .meta h3{margin:0;font-size:16px;color:var(--navy)}
+    .card .meta p{margin:6px 0 0;color:var(--muted);font-size:13px}
+
+    .about{display:flex;gap:18px;align-items:flex-start;flex-wrap:wrap}
+    .about .text{flex:1}
+    .about .image{width:320px;border-radius:10px;overflow:hidden}
+    .cta{display:flex;gap:12px;align-items:center}
+
+    .contact-card{background:linear-gradient(180deg,var(--white),#f4f8fb);padding:18px;border-radius:10px;display:flex;gap:12px;align-items:center;justify-content:space-between}
+    .socials a{display:inline-block;margin-right:8px;padding:8px 10px;background:#eef6ff;border-radius:8px;font-weight:600}
+
+    footer{text-align:center;color:var(--muted);padding:28px 8px;font-size:14px}
+    @media (max-width:880px){.hero{grid-template-columns:1fr;padding:12px}.hero-right{height:260px}.about{flex-direction:column}.about .image{width:100%}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <div class="brand">
+        <div class="logo">BOBBIN SPORTS</div>
+        <div style="font-size:13px;opacity:.9">Born in Sialkot • Built for Athletes</div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="hero-left">
+      <div style="display:inline-block;padding:6px 10px;border-radius:8px;background:rgba(255,255,255,0.06);color:#eaf6ff;font-weight:700;font-size:12px">Made in Sialkot</div>
+      <h1 style="margin-top:14px">Born in Sialkot. Built for Athletes. Trusted Worldwide.</h1>
+      <p class="lead">BOBBIN SPORTS crafts high-performance sportswear — from team jerseys and tracksuits to training gear and compression wear. Export quality, export-ready.</p>
+      <div class="cta"><a class="btn-primary" href="#products">Explore Collection</a></div>
+    </div>
+    <div class="hero-right">
+      <img src="https://source.unsplash.com/800x600/?athlete,sportswear,team" alt="hero image" style="width:100%;height:100%;object-fit:cover;display:block">
+    </div>
+  </section>
+
+  <main>
+    <section id="products" class="section">
+      <h2>Our Products</h2>
+      <div class="grid">
+
+        <div class="card">
+          <img src="https://source.unsplash.com/640x480/?tracksuit" alt="Tracksuit">
+          <div class="meta"><h3>Tracksuits</h3><p>Lightweight, double-stitched, export-grade fabrics for team warmups.</p></div>
+        </div>
+
+        <div class="card">
+          <img src="https://source.unsplash.com/640x480/?football-jersey,soccer-jersey" alt="Jerseys">
+          <div class="meta"><h3>Jerseys</h3><p>Custom prints, breathable mesh, and pro seams for match-day performance.</p></div>
+        </div>
+
+        <div class="card">
+          <img src="https://source.unsplash.com/640x480/?shorts,sports-shorts" alt="Shorts">
+          <div class="meta"><h3>Shorts</h3><p>Elastic waist, moisture-wicking fabrics, and clean finish for athletes.</p></div>
+        </div>
+
+        <div class="card">
+          <img src="https://source.unsplash.com/640x480/?hoodie,sports-hoodie" alt="Hoodies">
+          <div class="meta"><h3>Hoodies</h3><p>Comfort-fit pullovers and zip-ups — great for training and casual wear.</p></div>
+        </div>
+
+        <div class="card">
+          <img src="https://source.unsplash.com/640x480/?compression,compression-gear" alt="Compression wear">
+          <div class="meta"><h3>Compression Wear</h3><p>Supportive fabrics that aid performance and recovery.</p></div>
+        </div>
+
+        <div class="card">
+          <img src="https://source.unsplash.com/640x480/?training-gear,gym-gear" alt="Training gear">
+          <div class="meta"><h3>Training Gear</h3><p>Durable training sets, practice kits, and accessories for teams.</p></div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <h2>About Us</h2>
+      <div class="about">
+        <div class="text">
+          <p style="margin-top:0;color:#334155">BOBBIN SPORTS is a sportswear manufacturer based in Sialkot, Pakistan — a city with a proud legacy in sports goods manufacturing. We combine local craftsmanship with strict quality checks to deliver export-grade apparel. Our focus is on fit, durability, and performance so teams and athletes get gear they can trust.</p>
+          <p style="color:#334155">We work with clubs, schools, and retailers to provide custom sizes, branding, and bulk production. From sample approval to full production runs, our process is designed to be simple, reliable, and export-compliant.</p>
+        </div>
+        <div class="image"><img src="https://source.unsplash.com/640x640/?factory,sportswear" alt="factory" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Contact Us</h2>
+      <div class="grid" style="grid-template-columns:1fr 320px">
+        <div>
+          <div class="contact-card">
+            <div>
+              <strong>Ready to order?</strong>
+              <div style="color:var(--muted);margin-top:6px">Send us a message on WhatsApp or follow our socials to see latest samples.</div>
+            </div>
+            <div style="text-align:right">
+              <a class="btn-primary" href="https://wa.me/" target="_blank" rel="noopener">WhatsApp</a>
+            </div>
+          </div>
+
+          <div style="margin-top:14px">
+            <form onsubmit="event.preventDefault();alert('Thanks! We will contact you soon.');" style="display:flex;flex-direction:column;gap:8px">
+              <input type="text" placeholder="Your name" required style="padding:10px;border-radius:8px;border:1px solid #e6eef8">
+              <input type="email" placeholder="Email" required style="padding:10px;border-radius:8px;border:1px solid #e6eef8">
+              <textarea placeholder="Message / Order details" rows="4" style="padding:10px;border-radius:8px;border:1px solid #e6eef8"></textarea>
+              <button class="btn-primary" type="submit">Send Message</button>
+            </form>
+          </div>
+        </div>
+
+        <div>
+          <div style="background:var(--white);padding:12px;border-radius:10px;box-shadow:0 8px 24px rgba(9,30,66,0.06)">
+            <h3 style="margin:0 0 6px">Follow Us</h3>
+            <div style="color:var(--muted);margin-bottom:10px">See new samples, behind-the-scenes and offers.</div>
+            <div class="socials">
+              <a href="https://www.instagram.com/bobbin_sports/" target="_blank" rel="noopener">Instagram</a>
+              <a href="https://www.facebook.com/share/19k5HWEuxo/" target="_blank" rel="noopener">Facebook</a>
+            </div>
+            <div style="margin-top:12px;color:var(--muted);font-size:13px">Email: <a href="mailto:info@bobbinsports.com">info@bobbinsports.com</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> BOBBIN SPORTS • Sialkot, Pakistan
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent=new Date().getFullYear();
+    // smooth scroll for nav
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click',e=>{
+        e.preventDefault();const target=document.querySelector(a.getAttribute('href'));
+        if(target) target.scrollIntoView({behavior:'smooth',block:'start'});
+      });
+    });
+  </script>
+</body>
+</html>
