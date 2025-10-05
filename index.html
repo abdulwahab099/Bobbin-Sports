@@ -13,19 +13,21 @@
     }
 
     body {
-      background-color: #ffffff;
+      background-color: #fefefe;
       color: #001f3f;
       scroll-behavior: smooth;
+      line-height: 1.6;
     }
 
     header {
-      background-color: #001f3f;
+      background: linear-gradient(90deg, #001f3f, #003366);
       color: white;
       padding: 20px 0;
       text-align: center;
-      font-size: 1.5em;
-      font-weight: bold;
+      font-size: 1.7em;
+      font-weight: 700;
       letter-spacing: 2px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.2);
     }
 
     nav {
@@ -34,86 +36,98 @@
       gap: 30px;
       background-color: #003366;
       padding: 15px 0;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
 
     nav a {
       color: white;
       text-decoration: none;
       font-weight: 500;
-      transition: 0.3s;
+      padding: 5px 10px;
+      border-radius: 5px;
+      transition: all 0.3s ease;
     }
 
     nav a:hover {
+      background-color: #00bfff33;
       color: #00bfff;
     }
 
     section {
       padding: 80px 20px;
       text-align: center;
-      max-width: 1000px;
+      max-width: 1100px;
       margin: auto;
     }
 
     section h2 {
-      font-size: 2em;
-      margin-bottom: 20px;
+      font-size: 2.2em;
+      margin-bottom: 25px;
       color: #001f3f;
     }
 
     section p {
       font-size: 1.1em;
       color: #333;
-      line-height: 1.6;
-      margin-bottom: 30px;
+      max-width: 800px;
+      margin: 0 auto 30px auto;
     }
 
     .hero {
-      background: url('https://images.unsplash.com/photo-1599058917212-d750089bc07b?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
       color: white;
       padding: 150px 20px;
-      text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
+      text-shadow: 1px 1px 8px rgba(0,0,0,0.7);
+      border-radius: 10px;
+      margin-bottom: 50px;
     }
 
     .hero h1 {
-      font-size: 3em;
-      margin-bottom: 10px;
+      font-size: 3.5em;
+      margin-bottom: 15px;
     }
 
     .hero p {
       font-size: 1.3em;
-      max-width: 600px;
+      max-width: 650px;
       margin: 0 auto;
     }
 
     .products {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
     }
 
     .product {
-      background-color: #f5f8fa;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      background-color: #f9fbfd;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
       overflow: hidden;
-      transition: transform 0.3s ease;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
     }
 
     .product:hover {
-      transform: translateY(-5px);
+      transform: translateY(-8px) scale(1.03);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
     }
 
     .product img {
       width: 100%;
-      height: 250px;
+      height: 260px;
       object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .product:hover img {
+      transform: scale(1.05);
     }
 
     .product h3 {
-      padding: 15px;
+      padding: 18px;
       background-color: #001f3f;
       color: white;
-      font-size: 1.2em;
+      font-size: 1.3em;
+      transition: background-color 0.3s ease;
     }
 
     .contact-info {
@@ -126,33 +140,39 @@
       background-color: #001f3f;
       color: white;
       text-align: center;
-      padding: 20px;
+      padding: 25px;
+      font-size: 0.95em;
     }
 
     .social-links a {
-      margin: 0 10px;
+      margin: 0 12px;
       color: #00bfff;
       text-decoration: none;
+      transition: color 0.3s ease;
     }
 
-    /* Floating WhatsApp Button */
+    .social-links a:hover {
+      color: #0077cc;
+    }
+
     .whatsapp-float {
       position: fixed;
       width: 60px;
       height: 60px;
-      bottom: 20px;
-      right: 20px;
+      bottom: 25px;
+      right: 25px;
       background-color: #25D366;
       color: white;
       border-radius: 50%;
       text-align: center;
-      font-size: 30px;
-      box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+      font-size: 32px;
+      box-shadow: 2px 4px 12px rgba(0,0,0,0.3);
       z-index: 100;
+      transition: transform 0.3s ease;
     }
 
-    .whatsapp-float i {
-      margin-top: 15px;
+    .whatsapp-float:hover {
+      transform: scale(1.1);
     }
   </style>
 
@@ -170,7 +190,7 @@
     <a href="#contact">Contact</a>
   </nav>
 
-  <section id="home" class="hero">
+  <section id="home" class="hero" style="background: url('https://images.pexels.com/photos/159515/football-american-football-runner-player-159515.jpeg?auto=compress&cs=tinysrgb&w=1600') no-repeat center center/cover;">
     <h1>Elevate Your Game</h1>
     <p>Premium quality sportswear crafted in Sialkot — designed for athletes, trusted worldwide.</p>
   </section>
@@ -185,20 +205,24 @@
     <h2>Our Products</h2>
     <div class="products">
       <div class="product">
-        <img src="https://images.unsplash.com/photo-1618354691397-891adf6c4b3d?auto=format&fit=crop&w=800&q=80" alt="Tracksuit">
+        <img src="https://postimg.cc/t7YdpBtF" alt="Tracksuit">
         <h3>Tracksuits</h3>
       </div>
       <div class="product">
-        <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=800&q=80" alt="Gym Wear">
+        <img src="https://copilot.microsoft.com/th/id/BCO.515a4239-adc9-45c7-b8a3-afb73cd4415a.png" alt="Gym Wear">
         <h3>Gym Wear</h3>
       </div>
       <div class="product">
-        <img src="https://images.unsplash.com/photo-1606813902871-9b6e6f37c88f?auto=format&fit=crop&w=800&q=80" alt="Hoodies">
+        <img src="https://lh3.googleusercontent.com/gg-dl/AJfQ9KQePGGMPk3-LfYURv-sR6B7uMb4fSjeRcQXDvMgKiC1FTvCnuJDEvkn16MFfSlAuiQ0HGRyZjwmkZ45qeNcmkV2_n5JXlwrQNx_z6diAHnheswhgwInVpO38nHhXWJ-_GYWl3B-iFOlalnOEWYK6rsdpiFRTB6-my29Q2DeJRlaCW-N=s1024" alt="Hoodie">
         <h3>Hoodies</h3>
       </div>
       <div class="product">
-        <img src="https://images.unsplash.com/photo-1599058917212-d750089bc07b?auto=format&fit=crop&w=800&q=80" alt="Jerseys">
+        <img src="https://lh3.googleusercontent.com/gg-dl/AJfQ9KSNS2cJ8irebIhsFU0HiQ_H1XLwxI2iyQuHc2vqm2htpMgy9h0hDl1jFvyZ1AUVaIhEUMEgC3by8PXzw7Jet3E_h2h0viWgJSasnz3RTcAojvMQcILPK8kZkw8qqSD7B0zkdmoRRrm3na_NDsj0N9bCY7XOo8kk2uHRNrMGEB6DLpau=s1024" alt="Jersey">
         <h3>Jerseys</h3>
+      </div>
+      <div class="product">
+        <img src="https://www.highqualityind.com/watermark.php?path=pictures/Compression%20wear_HQI-102_105_3.jpg" alt="Compression Wear">
+        <h3>Compression Wear</h3>
       </div>
     </div>
   </section>
